@@ -1,0 +1,164 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit', sans-serif;
+}
+
+/*----------------------------------------------------------------------------- Menu Responsivo*/
+.menu {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    font-size: 30px;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: black;
+    color: white;
+    right: 15px;
+    top: 15px;
+    z-index: 100;
+}
+
+/*----------------------------------------------------------------------------- Barra Lateral*/
+.barra-lateral {
+    background-color: #92953DFF;
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 250px;
+    /* Ancho inicial de la barra lateral */
+    height: 100%;
+    overflow: hidden;
+    padding: 20px 15px;
+    left: 0;
+    transition: width 0.5s ease, background-color 0.3s ease, left 0.5s ease;
+    z-index: 50;
+}
+
+.barra-lateral.ocultar {
+    /* Ocultar la barra de navegación */
+    width: 120px;
+    /* Ancho de la barra */
+}
+
+.barra-lateral.ocultar .navegacion a span {
+    /* Ocultar el texto cuando la barra está oculta */
+    display: none;
+}
+
+/*----------------------------------------------------------------------------- Imagen*/
+.barra-lateral img {
+    max-width: 100%;
+    /* Ajusta el ancho máximo de la imagen */
+}
+
+/*----------------------------------------------------------------------------- Menús*/
+.barra-lateral .navegacion {
+    height: 100%;
+}
+
+.barra-lateral .navegacion li {
+    list-style: none;
+}
+
+.barra-lateral .navegacion a {
+    height: auto;
+    width: auto;
+    display: flex;
+    border-radius: 15px;
+    color: black;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.barra-lateral .navegacion a:hover {
+    background-color: #BB8F16FF;
+}
+
+.barra-lateral .navegacion ion-icon {
+    min-width: 50px;
+    font-size: 20px;
+}
+
+/*----------------------------------------------------------------------------- Submenús*/
+ul {
+    list-style-type: none;
+}
+
+li {
+    position: relative;
+    /* Asegúrate de que la posición sea relativa para los submenús */
+}
+
+.navegacion .submenu a:hover {
+    /* Pasar mouse sobre el submenú */
+    background-color: white;
+    /* Color blanco el submenú */
+}
+
+.submenu {
+    /* Estilos para el submenú */
+    display: none;
+    /* Oculto por defecto */
+    list-style: none;
+    z-index: 1000;
+    /* Asegúrate de que el submenú esté por encima de otros elementos */
+    overflow: hidden;
+}
+
+.submenu li {
+    /* Estilos para los elementos del submenú */
+    padding: 0px 20px;
+}
+
+.dropdown.active .submenu {
+    /* Estilos cuando el submenú está activo */
+    display: block;
+}
+
+/*----------------------------------------------------------------------------- Contenedor de Módulos*/
+.contenedor {
+    margin-left: 250px;
+    /* Igual al ancho de la barra de navegación */
+    padding: 20px;
+    /* Espaciado interno para el contenido */
+    height: 100vh;
+    /* Ocupa toda la altura de la ventana */
+    transition: margin-left 0.5s ease,background-color 0.3s ease,left 0.5s ease;
+    /* Transición cuando se oculta la barra de navegación*/
+}
+
+/*----------------------------------------------------------------------------- Responsivo*/
+@media (max-width: 600px) {
+    .barra-lateral {
+        position: fixed;
+        left: -250px;
+        /* Se oculta la barra de navegación */
+    }
+
+    .contenedor {
+        margin-left: 0;
+        /* Sin margen izquierdo */
+    }
+
+    .max-barra-lateral {
+        left: 0;
+    }
+
+    .menu {
+        display: flex;
+    }
+
+    .menu ion-icon:nth-child(2) {
+        display: none;
+    }
+}

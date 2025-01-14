@@ -1,0 +1,457 @@
+/* Estilos generales del cuerpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Estilos de botones general */
+.boton-accion {
+    padding: 10px 20px;
+    background-color: #BB8F16FF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    vertical-align: middle;
+    /* Alineación vertical */
+    line-height: 1.2;
+    /* Ajusta la altura de la línea para mejor alineación */
+    margin: 0;
+    /* Elimina el margen */
+    display: inline-block;
+    /* Asegúrate de que sea un elemento en línea */
+}
+
+
+/* Estilo para la imagen */
+td img {
+    max-width: 100px;
+    border-radius: 5px;
+    vertical-align: middle;
+    /* Alineación vertical */
+}
+
+/* Estilo para las celdas de la tabla */
+td {
+    padding: 0;
+    border: none;
+    vertical-align: middle;
+    /* Asegúrate de que las celdas estén alineadas en el medio */
+}
+
+/* Cambio de color al pasar el cursor */
+.boton-accion:hover {
+    background-color: #a87911;
+}
+
+/* Contenido principal */
+.contenido-principal {
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: inline-block;
+    min-width: 100%;
+    /* Asegura que tenga al menos el ancho de la tabla */
+}
+
+
+/* Div superior */
+.superior {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.superior h2 {
+    /* Nombre del módulo */
+    text-align: center;
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Div superior */
+.superiorSolo {
+    display: flex;
+    justify-content: center;
+    /* Centra el contenido horizontalmente */
+    align-items: center;
+    /* Centra el contenido verticalmente */
+    margin-bottom: 20px;
+}
+
+.superiorSolo h2 {
+    text-align: center;
+    /* Asegura que el texto dentro del h2 esté centrado */
+    color: #333;
+    font-size: 40px;
+    margin-bottom: 20px;
+}
+
+/* Div Filtros */
+.filtros {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.filtro-registros {
+    display: flex;
+    align-items: center;
+}
+
+.selector-filtro,
+.input-busqueda {
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+/* Contenedor principal de la búsqueda de alumnos */
+.busqueda {
+    margin-bottom: 20px;
+}
+
+/* Contenedor de los elementos de búsqueda */
+.busqueda-items {
+    display: flex;
+    gap: 20px;
+    /* Añadido espacio entre los campos */
+    justify-content: flex-start;
+    /* Alineación a la izquierda */
+    align-items: center;
+}
+
+/* Estilo de cada elemento de búsqueda */
+.busqueda-item {
+    flex: 1;
+    /* Cada item ocupa el mismo espacio */
+    min-width: 200px;
+    /* Establece un tamaño mínimo */
+}
+
+/* Etiquetas de los selectores */
+.busqueda-item label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 8px;
+    color: #333;
+    /* Color para la etiqueta */
+}
+
+/* Estilo de los campos select */
+.busqueda-field {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 16px;
+    color: #333;
+    background-color: #fff;
+    transition: border-color 0.3s ease;
+}
+
+/* Estilo para el borde del select cuando está enfocado */
+.busqueda-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+/* Añadir un poco de espaciado entre los elementos y el borde */
+.busqueda-item select {
+    margin-top: 4px;
+}
+
+/* Estilo del contenedor del botón */
+.busqueda-boton {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    /* Añadir margen superior para separarlo de los selects */
+}
+
+/* Tabla */
+
+/* Estilos específicos para la celda de botones */
+.tabla {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+    border-radius: 5px;
+}
+
+.tabla th,
+.tabla td {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+.tabla th {
+    background-color: #BB8F16FF;
+    color: white;
+}
+
+.tabla-strip tbody tr:nth-of-type(odd) {
+    background-color: #f9f9f9;
+}
+
+.tabla-hover tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+.tabla td:last-child {
+    /* Ajusta esta altura según tus necesidades */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Div Paginación */
+.paginacion {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    /* Ocultar por defecto */
+    position: fixed;
+    /* Posición fija */
+    z-index: 1;
+    /* Sobre otros elementos */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    /* Fondo oscuro */
+    justify-content: center;
+    /* Centrado horizontal */
+    align-items: center;
+    /* Centrado vertical */
+    transition: all 0.3s ease;
+    /* Transición */
+}
+
+/* Estilos para el modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+
+/* Estilo del contenido del modal */
+.modal-content {
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 30px;
+    width: 90%;
+    /* Ancho ajustable para pantallas pequeñas */
+    max-width: 600px;
+    max-height: 90vh;
+    /* Alto máximo ajustado para pantalla completa */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-30px);
+    opacity: 0;
+    transition: transform 0.4s ease, opacity 0.4s ease;
+    overflow-y: auto;
+    /* Habilita el desplazamiento interno si el contenido se extiende */
+}
+
+.modal-content.show {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.modal-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Estilos de formulario */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.input-group {
+    display: flex;
+    gap: 20px;
+    /* Espacio entre cada input-item */
+    align-items: flex-start;
+    /* Alineación vertical de los elementos */
+    flex-wrap: wrap;
+    /* Permite que los elementos se ajusten en varias filas */
+}
+
+.input-item {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    /* Ocupa el ancho disponible */
+    min-width: 150px;
+    /* Evita que los elementos sean demasiado pequeños */
+}
+
+.input-field {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    background-color: #f4f4f4;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    box-sizing: border-box;
+    /* Asegura que el padding esté dentro del ancho */
+}
+
+.input-field:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+.radio-group {
+    display: flex;
+    align-items: center;
+}
+
+.radio-input {
+    margin-right: 10px;
+}
+
+.radio-group label {
+    margin-right: 15px;
+}
+
+.button-group {
+    margin-top: 20px;
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-btn:hover {
+    background-color: #0056b3;
+}
+
+.close {
+    color: #aaa;
+    font-size: 30px;
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.close:hover {
+    color: #333;
+}
+
+
+/* Animación de aparición */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.modal.show .modal-content {
+    animation: modalFadeIn 0.4s ease;
+}
+
+/* Mensajes después del envío de los datos de la inscripción */
+.message {
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.success {
+    background-color: #dff0d8;
+    color: #3c763d;
+    border: 1px solid #d6e9c6;
+}
+
+.error {
+    background-color: #f2dede;
+    color: #a94442;
+    border: 1px solid #ebccd1;
+}
+
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/* Estilos adicionales */
+#documentosContainer label {
+    font-size: 1rem;
+    color: #555;
+    display: block;
+    margin-top: 1rem;
+}
+
+#documentosContainer input[type="file"] {
+    margin-top: 0.3rem;
+}
+
+a.pdf-icon {
+    font-size: 1.5rem;
+    color: #FF0000;
+    margin-left: 10px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+a.pdf-icon:hover {
+    color: #B20000;
+}
